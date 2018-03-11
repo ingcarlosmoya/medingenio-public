@@ -711,6 +711,7 @@ input[type="email"]:focus {
 
 .single-service-2-item p {
     margin: 0px;
+    text-align: center;
 }
 
 .service-2-area {
@@ -4184,6 +4185,10 @@ Custom Styles
     background-image: url("/assets/img/contact.jpg");
 }
 
+.slider-area-services {
+    background-image: url("/assets/img/aboutUs.png");
+}
+
 .company-information-text{
     margin-top: 15px;
 }
@@ -4207,6 +4212,10 @@ Custom Styles
 
 .company-information-icon i{
     margin-top: 5px;
+}
+
+.single-service-text{
+    text-align: center;
 }
 
 @media only screen and (max-width: 767px) {
