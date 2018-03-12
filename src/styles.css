@@ -1420,7 +1420,7 @@ input[type="email"]:focus {
 }
 
 .testimonial-area {
-    background-image: url("/assets/img/testimonial-bg.jpg");
+    background-image: url("/assets/img/testimonial.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
