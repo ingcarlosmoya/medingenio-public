@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule }   from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +13,10 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { ClientsComponent } from './clients/clients.component';
 
+import { MailService } from './services/mail.service';
+import { BlogComponent } from './blog/blog.component';
+
+
 
 @NgModule({
   declarations: [
@@ -19,13 +25,18 @@ import { ClientsComponent } from './clients/clients.component';
     HomeComponent,
     ContactComponent,
     ServicesComponent,
-    ClientsComponent
+    ClientsComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    MailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

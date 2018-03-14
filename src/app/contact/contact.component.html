@@ -39,26 +39,74 @@
                     <h2>Déjanos un mensaje!</h2>
                     <p>Permítenos resolver tus dudas y acercarnos a ti, después de todo es por lo cual estamos aquí. Estaremos
                         en contacto contigo a la mayor brevedad..</p>
-                    <form action="https://formspree.io/@gmail.com" method="post">
+                    <form (ngSubmit)="post()" #contactForm="ngForm">
                         <div class="row">
-                            <div class="col-sm-4">
-                                <input type="text" name="name" placeholder="Nombre*">
+                            <div class="col-sm-6">
+                                <input type="text" name="name" #contactname="ngModel" placeholder="Nombre*" [(ngModel)]="mail.name" required>
+                                <div class="md-errors-spacer" [hidden]="contactname.valid || contactname.untouched">
+                                    <div *ngIf="contactname.errors && contactname.errors.required">
+                                        Este campo es requerido
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-4">
-                                <input type="email" name="email" placeholder="Correo electrónico*">
+                            <div class="col-sm-6">
+                                <input type="text" name="lastName" #contactlastname="ngModel" placeholder="Apellido*" [(ngModel)]="mail.lastName" required>
+                                <div class="md-errors-spacer" [hidden]="contactlastname.valid || contactlastname.untouched">
+                                    <div *ngIf="contactlastname.errors && contactlastname.errors.required">
+                                        Este campo es requerido
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-4">
-                                <input type="text" name="phone" placeholder="Teléfono*">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="email" name="email" #contactemail="ngModel" placeholder="Correo electrónico*" [(ngModel)]="mail.email" required>
+                                <div class="md-errors-spacer" [hidden]="contactemail.valid || contactemail.untouched">
+                                    <div *ngIf="contactemail.errors && contactemail.errors.required">
+                                        Este campo es requerido
+                                    </div>
+                                    <div *ngIf="contactemail.errors && contactemail.errors.pattern">
+                                        Correo invalido
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" name="phone" #contactphone="ngModel" placeholder="Teléfono*" [(ngModel)]="mail.phone" required>
+                                <div class="md-errors-spacer" [hidden]="contactphone.valid || contactphone.untouched">
+                                    <div *ngIf="contactphone.errors && contactphone.errors.required">
+                                        Este campo es requerido
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <textarea name="message" placeholder="Mensaje*"></textarea>
+                                <textarea name="message" #contactmessage="ngModel" placeholder="Mensaje*" [(ngModel)]="mail.message" required></textarea>
+                                <div class="md-errors-spacer" [hidden]="contactmessage.valid || contactmessage.untouched">
+                                    <div *ngIf="contactmessage.errors && contactmessage.errors.required">
+                                        Este campo es requerido
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-12">
-                                <input type="submit" value="Enviar!" class="">
+                            <div class="col-sm-4">
+                                <button class="contactSendButton" type="submit" [disabled]="!contactForm.form.valid">
+                                    <span *ngIf="!isMessageSending">
+                                        Enviar
+                                    </span>
+                                    <span *ngIf="isMessageSending">
+                                        Enviando
+                                        <i class="fa fa-spinner fa-spin"></i>
+                                    </span>
+                                </button>
+                                <br>
+                            </div>
+                            <div class="col-sm-8 text-center">
+                                <div *ngIf="messageSent" class="alert alert-success box-msg" role="alert">
+                                    <strong>Mensaje enviado! </strong> Pronto estaremos en contacto.
+                                </div>
                             </div>
                         </div>
                     </form>

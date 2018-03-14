@@ -1386,18 +1386,19 @@ input[type="email"]:focus {
     box-shadow: 0 0 10px #ccc;
 }
 
-.blog-btn {
-    color: #2f302f;
+.blog-btn, .blog-btn:visited {
+    color: #43a000;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-    border-bottom: 1px solid #2f302f;
+    border-bottom: 1px solid #43a000;
     display: inline;
     position: relative;
 }
 
 .blog-btn:hover {
     color: #43a000;
+    font-weight: 700;
 }
 
 .blog-area {
@@ -2707,12 +2708,8 @@ input[type="email"]:focus {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 82px;
-    width: 100%
-}
-
-.single-sidebar-blog-box-img.single-sidebar-blog-box-img2 {
-    background-image: url("/assets/img/single-sidebar-blog-box-img-2.jpg");
+    height: 78px;
+    width: 120px;
 }
 
 .single-sidebar-blog-box-img.single-sidebar-blog-box-img3 {
@@ -3059,9 +3056,13 @@ input[type="email"]:focus {
     transition: .3s;
     margin-left: 5px;
 }
+.blog-social-icons a  i{
+    margin-top: 8px;
+}
 
 .blog-social-icons a:hover {
     background: #3E9100;
+    color:#fff;
 }
 
 .single-team-page-item {
@@ -3253,13 +3254,13 @@ input[type="email"]:focus {
     transition: .4s;
 }
 
-.contact-page-left input[type="text"], .contact-page-left input[type="email"] {
+.contact-page-left input[type="text"], .contact-page-left input[type="email"]{
     background: none;
     border: 1px solid #D9D9D9;
     transition: .4s;
 }
 
-.contact-page-left input[type="submit"] {
+.contact-page-left input[type="submit"], button {
     height: 52px;
     background-color: #3E9100;
     color: #fff;
@@ -3268,9 +3269,10 @@ input[type="email"]:focus {
     font-size: 15px;
     font-weight: 400;
     transition: .4s;
+    opacity: 1;
 }
 
-.contact-page-left input[type="text"]:focus, .contact-page-left input[type="email"]:focus {
+.contact-page-left input[type="text"]:focus, .contact-page-left input[type="email"]:focus, button {
     border-color: #43a000;
 }
 
@@ -4188,6 +4190,9 @@ Custom Styles
 .slider-area-services {
     background-image: url("/assets/img/aboutUs.png");
 }
+.slider-area-blog {
+    background-image: url("/assets/img/blog.jpg");
+}
 
 .company-information-text{
     margin-top: 15px;
@@ -4216,6 +4221,26 @@ Custom Styles
 
 .single-service-text{
     text-align: center;
+}
+
+.contact-page-left input:disabled, button:disabled{
+ opacity: 0.3;
+}
+.contactSendButton{
+    color: #fff!important;
+}
+
+.contactUsLink a{
+    color: #43a000;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+}
+.contactUsLink a:hover{
+    color: #43a000;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 767px) {
