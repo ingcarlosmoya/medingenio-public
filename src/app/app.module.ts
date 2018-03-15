@@ -15,6 +15,7 @@ import { ClientsComponent } from './clients/clients.component';
 
 import { MailService } from './services/mail.service';
 import { BlogComponent } from './blog/blog.component';
+import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 
 
 
@@ -26,7 +27,8 @@ import { BlogComponent } from './blog/blog.component';
     ContactComponent,
     ServicesComponent,
     ClientsComponent,
-    BlogComponent
+    BlogComponent,
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule,

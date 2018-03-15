@@ -1,3 +1,9 @@
+<meta property="og:url"                content="https://www.medingenio.com/blog-detail/1" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="Visita de la Secretaria de Salud, ¿Una Lipo-Visita?" />
+<meta property="og:description"        content="EN DÍAS PASADOS recibí la llamada de un amigo, que me comento, que a uno de sus mejores clientes le anunciaron vista de la Secretaria Distrital de Salud y que el asesor que les estaba ayudando, se había perdido del mapa, no contestaba llamadas ni correos y que como buenos colombianos, el prestador había dejado las tareas del sistema de habilitación para lo último. Nos pidieron visitarlos y realizar un chequeo a los documentos y al proceso que ellos llevaban." />
+<meta property="og:image"              content="https://www.medingenio.com/assets/img/blog/lipovisita.jpg" />
+
 <div class="slider-area slider-area-img slider-area-blog">
   <div class="container">
     <div class="row">
@@ -20,44 +26,41 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <div class="blog-mesonary-area">
-          <div class="blog-mesonary-items">
-            <a [routerLink]="['/blog-detail','1']">
-              <div class="single-mesonary-item">
-                <img src="/assets/img/blog/lipovisitaIntro.jpg" alt="">
-                <div class="single-mesonary-item-hover">
-                  <h3>Visita de la Secretaria de Salud, ¿Una Lipo-Visita?</h3>
-                 <!--  <h4>
-                    <span>Date</span>15 Jun 2017</h4> -->
-                </div>
-              </div>
-            </a>
+        <div class="blog-left-content">
+          <div class="single-blog-left-item">
+            <img [src]="img" alt="">
+            <div class="single-blog-text wow fadeInLeft" [innerHTML]="blog">
 
-            <a [routerLink]="['/blog-detail','2']">
-              <div class="single-mesonary-item">
-                <img src="/assets/img/blog/seguridadDelPacienteIntro.jpg" alt="">
-                <div class="single-mesonary-item-hover">
-                  <h3>Seguridad del Paciente</h3>
-                  <!--<h4>
-                     <span>Date</span>15 Jun 2017</h4> -->
+            </div>
+            <div class="block-content-blog-bottom">
+              <div class="row">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-6">
+                  <div class="blog-social-icons">
+                    <p>
+                      <b>Comparte este contenido</b>
+                    </p>
+                    <a [href]="facebook" target="_blank">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a [href]="twitter" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                    <a [href]="linkedin" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </a>
-            <a [routerLink]="['/blog-detail','3']">
-              <div class="single-mesonary-item">
-                <img src="/assets/img/blog/5secretosIntro.jpg" alt="">
-                <div class="single-mesonary-item-hover">
-                  <h3>5 Secretos para recibir la visita de la Secretaria sin problemas</h3>
-                   <!--<h4>
-                    <span>Date</span>15 Jun 2017</h4> -->
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
         </div>
+        <div class="blog-comment">
+        </div>
+        <div class="leave-a-reply">
+        </div>
       </div>
-
-
       <div class="col-sm-4">
 
         <div class="single-sidebar-item">
@@ -73,7 +76,7 @@
                 <div class="single-sidebar-blog-box-text">
                   <h4>5 Secretos para recibir la visita de la Secretaria sin problemas</h4>
                   <h5>Al iniciar un nuevo proyecto, siempre realizamos un diagnóstico inicial...</h5>
-                  <a [routerLink]="['/blog','3']" class="blog-btn">Ver más</a>
+                  <a [routerLink]="['/blog-detail','3']" class="blog-btn">Ver más</a>
                 </div>
               </div>
             </div>
@@ -89,7 +92,7 @@
                 <div class="single-sidebar-blog-box-text">
                   <h4>Visita de la Secretaria de Salud ¿Una Lipo-Visita?</h4>
                   <h5>En días pasados recibí la llamada de un amigo...</h5>
-                  <a [routerLink]="['/blog','1']" class="blog-btn">Ver más</a>
+                  <a [routerLink]="['/blog-detail','1']" class="blog-btn">Ver más</a>
 
                 </div>
               </div>
@@ -106,9 +109,16 @@
                 <div class="single-sidebar-blog-box-text">
                   <h4>Seguridad del Paciente</h4>
                   <h5>“Seguridad del Paciente se define como el conjunto de elementos...</h5>
-                  <a [routerLink]="['/blog','2']" class="blog-btn">Ver más</a>
+                  <a [routerLink]="['/blog-detail','2']" class="blog-btn">Ver más</a>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-right">
+              <br>
+              <a [routerLink]="['/blog']" class="blog-btn">
+                Ver la lista completa!</a>
             </div>
           </div>
         </div>

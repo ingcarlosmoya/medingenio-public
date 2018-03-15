@@ -2947,7 +2947,7 @@ input[type="email"]:focus {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 346px;
+    height: 340px;
     width: 100%;
     z-index: 1
 }
@@ -2970,9 +2970,6 @@ input[type="email"]:focus {
     transition: all 0.3s ease 0s;
 }
 
-.single-mesonary-item img {
-    width: 100%;
-}
 
 .single-mesonary-item {
     border: 5px solid #fff;
@@ -3061,7 +3058,11 @@ input[type="email"]:focus {
 }
 
 .blog-social-icons a:hover {
-    background: #3E9100;
+    background: #3E9100!important;
+    color:#fff;
+}
+.blog-social-icons a:visited {
+    background: #626262;
     color:#fff;
 }
 
