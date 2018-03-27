@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
 import { AppComponent } from './app.component';
@@ -16,6 +18,8 @@ import { ClientsComponent } from './clients/clients.component';
 import { MailService } from './services/mail.service';
 import { BlogComponent } from './blog/blog.component';
 import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
+import { environment } from '../environments/environment';
+import { BlogService } from './services/blog.service';
 
 
 
@@ -34,10 +38,13 @@ import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [
-    MailService
+    MailService,
+    BlogService
   ],
   bootstrap: [AppComponent]
 })

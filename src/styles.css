@@ -2710,6 +2710,7 @@ input[type="email"]:focus {
     background-repeat: no-repeat;
     height: 78px;
     width: 120px;
+    margin-top:15px;
 }
 
 .single-sidebar-blog-box-img.single-sidebar-blog-box-img3 {
@@ -2976,7 +2977,7 @@ input[type="email"]:focus {
     display: flex;
     float: left;
     position: relative;
-    width: 50%;
+    width: 33.3%;
 }
 
 .single-mesonary-item-hover {
@@ -3026,7 +3027,7 @@ input[type="email"]:focus {
     position: relative
 }
 
-.block-content-blog-bottom::after {
+/* .block-content-blog-bottom::after {
     position: absolute;
     left: 50%;
     top: 26px;
@@ -3035,7 +3036,7 @@ input[type="email"]:focus {
     width: 220px;
     height: 1px;
     margin-left: -110px;
-}
+} */
 
 .blog-social-icons {
     text-align: right;

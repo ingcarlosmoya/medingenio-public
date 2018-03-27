@@ -107,40 +107,30 @@
                     <h2>Ultimas noticias</h2>
                     <p>Mantente actualizado de las ultimas noticias y tendencias con nuestras notas semanales</p>
                     <div class="latest-blog-list">
-                        <div class="single-latest-blog-item">
+                        <div *ngFor="let article of articles" class="single-latest-blog-item">
                             <div class="single-latest-blog-item-img">
-                                <a [routerLink]="['/blog-detail','2']">
-                                    <img src="/assets/img/blog/seguridadDelPacienteMini.jpg" alt="">
+                                <a [routerLink]="['/blog-detail',article.id]">
+                                    <img [src]="article.imageMini" alt="">
                                 </a>
                             </div>
                             <div class="single-latest-blog-content">
                                 <a [routerLink]="['/blog-detail','2']">
-                                    <h2>Seguridad del Paciente</h2>
+                                    <h2>{{article.title}}</h2>
                                 </a>
-                                <p>Seguridad del Paciente se define como el conjunto de elementos estructurales, procesos, instrumentos
-                                    y metodologías basadas en evidencias científicamente...
+                                <p class="text-justify">{{article.textMini}}
                                 </p>
-                                <a [routerLink]="['/blog-detail','2']" class="blog-btn">Ver más</a>
-                            </div>
-                        </div>
-                        <div class="single-latest-blog-item">
-                            <div class="single-latest-blog-item-img">
-                                <a [routerLink]="['/blog-detail','1']">
-                                    <img src="/assets/img/blog/lipovisita.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="single-latest-blog-content">
-                                    <a [routerLink]="['/blog-detail','1']">
-                                    <h2> Visita de la Secretaria de Salud
-                                        <br>¿Una Lipo-Visita?</h2>
-                                </a>
-                                <p>En días pasados recibí la llamada de un amigo, que me comento, que a uno de sus mejores clientes
-                                    le anunciaron vista de la Secretaria Distrital de Salud...</p>
-                                <a [routerLink]="['/blog-detail', 1]" class="blog-btn">Ver más</a>
+                                <a [routerLink]="['/blog-detail',article.id]" class="blog-btn">Ver más</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="latest-blog-content text-right">
+                    <br>
+                    <a [routerLink]="['/blog']" class="blog-btn">
+                        Ver la lista completa!</a>
+                </div>
+
             </div>
             <div class="col-sm-6 col-xs-12  wow fadeInLeft">
                 <div class="latest-blog-right">

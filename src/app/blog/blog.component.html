@@ -19,97 +19,19 @@
 <div class="single-blog-page-area section-padding">
   <div class="container">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-lg-12">
         <div class="blog-mesonary-area">
           <div class="blog-mesonary-items">
-            <a [routerLink]="['/blog-detail','1']">
+            <a *ngFor="let article of articles | async" [routerLink]="['/blog-detail',article.id]">
               <div class="single-mesonary-item">
-                <img src="/assets/img/blog/lipovisitaIntro.jpg" alt="">
+                <img [src]="article.imageIntro" alt="">
                 <div class="single-mesonary-item-hover">
-                  <h3>Visita de la Secretaria de Salud, ¿Una Lipo-Visita?</h3>
-                 <!--  <h4>
-                    <span>Date</span>15 Jun 2017</h4> -->
+                  <h3>{{article.title}}</h3>
+                  <h4>
+                    {{article.createDate | date }}</h4>
                 </div>
               </div>
             </a>
-
-            <a [routerLink]="['/blog-detail','2']">
-              <div class="single-mesonary-item">
-                <img src="/assets/img/blog/seguridadDelPacienteIntro.jpg" alt="">
-                <div class="single-mesonary-item-hover">
-                  <h3>Seguridad del Paciente</h3>
-                  <!--<h4>
-                     <span>Date</span>15 Jun 2017</h4> -->
-                </div>
-              </div>
-            </a>
-            <a [routerLink]="['/blog-detail','3']">
-              <div class="single-mesonary-item">
-                <img src="/assets/img/blog/5secretosIntro.jpg" alt="">
-                <div class="single-mesonary-item-hover">
-                  <h3>5 Secretos para recibir la visita de la Secretaria sin problemas</h3>
-                   <!--<h4>
-                    <span>Date</span>15 Jun 2017</h4> -->
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-sm-4">
-
-        <div class="single-sidebar-item">
-          <h3>Artículos recientes…</h3>
-          <div class="single-sidebar-blog-box">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="single-sidebar-blog-box-img">
-                  <img src="/assets/img/blog/5secretosMini.jpg">
-                </div>
-              </div>
-              <div class="col-sm-8">
-                <div class="single-sidebar-blog-box-text">
-                  <h4>5 Secretos para recibir la visita de la Secretaria sin problemas</h4>
-                  <h5>Al iniciar un nuevo proyecto, siempre realizamos un diagnóstico inicial...</h5>
-                  <a [routerLink]="['/blog','3']" class="blog-btn">Ver más</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="single-sidebar-blog-box">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="single-sidebar-blog-box-img">
-                  <img src="/assets/img/blog/lipovisitaMini.jpg">
-                </div>
-              </div>
-              <div class="col-sm-8">
-                <div class="single-sidebar-blog-box-text">
-                  <h4>Visita de la Secretaria de Salud ¿Una Lipo-Visita?</h4>
-                  <h5>En días pasados recibí la llamada de un amigo...</h5>
-                  <a [routerLink]="['/blog','1']" class="blog-btn">Ver más</a>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="single-sidebar-blog-box">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="single-sidebar-blog-box-img">
-                  <img src="/assets/img/blog/seguridadDelPacienteMini.jpg">
-                </div>
-              </div>
-              <div class="col-sm-8">
-                <div class="single-sidebar-blog-box-text">
-                  <h4>Seguridad del Paciente</h4>
-                  <h5>“Seguridad del Paciente se define como el conjunto de elementos...</h5>
-                  <a [routerLink]="['/blog','2']" class="blog-btn">Ver más</a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

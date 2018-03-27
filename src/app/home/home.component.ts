@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../services/blog.service';
+import { Article } from '../blog/article';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  articles: Article[];
+
+  constructor(private blogService: BlogService) {
+    this.blogService.getArticlesRightList().subscribe(articles => {
+      this.articles = articles.slice(0,2);
+    });
+   }
 
   ngOnInit() {
   }

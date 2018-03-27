@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../services/blog.service';
+import { Article } from './article';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-blog',
@@ -7,8 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
+articles : Observable<Article[]>;
 
-  constructor() { }
+  constructor(private blogService: BlogService) {
+    this.articles = this.blogService.getArticles();
+   }
 
   ngOnInit() {
    

@@ -28,8 +28,8 @@
       <div class="col-sm-8">
         <div class="blog-left-content">
           <div class="single-blog-left-item">
-            <img [src]="img" alt="">
-            <div class="single-blog-text wow fadeInLeft" [innerHTML]="blog">
+            <img [src]="article.image" alt="">
+            <div class="single-blog-text wow fadeInLeft" [innerHTML]="article.text">
 
             </div>
             <div class="block-content-blog-bottom">
@@ -41,13 +41,13 @@
                     <p>
                       <b>Comparte este contenido</b>
                     </p>
-                    <a [href]="facebook" target="_blank">
+                    <a [href]="article.facebook" target="_blank">
                       <i class="fa fa-facebook"></i>
                     </a>
-                    <a [href]="twitter" target="_blank">
+                    <a [href]="article.twitter" target="_blank">
                       <i class="fa fa-twitter"></i>
                     </a>
-                    <a [href]="linkedin" target="_blank">
+                    <a [href]="article.linkedin" target="_blank">
                       <i class="fa fa-linkedin"></i>
                     </a>
                   </div>
@@ -65,51 +65,19 @@
 
         <div class="single-sidebar-item">
           <h3>Artículos recientes…</h3>
-          <div class="single-sidebar-blog-box">
+          <div *ngFor="let article of articles" class="single-sidebar-blog-box">
             <div class="row">
               <div class="col-sm-4">
                 <div class="single-sidebar-blog-box-img">
-                  <img src="/assets/img/blog/5secretosMini.jpg">
+                  <img [src]="article.imageMini">
                 </div>
               </div>
               <div class="col-sm-8">
                 <div class="single-sidebar-blog-box-text">
-                  <h4>5 Secretos para recibir la visita de la Secretaria sin problemas</h4>
-                  <h5>Al iniciar un nuevo proyecto, siempre realizamos un diagnóstico inicial...</h5>
-                  <a [routerLink]="['/blog-detail','3']" class="blog-btn">Ver más</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="single-sidebar-blog-box">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="single-sidebar-blog-box-img">
-                  <img src="/assets/img/blog/lipovisitaMini.jpg">
-                </div>
-              </div>
-              <div class="col-sm-8">
-                <div class="single-sidebar-blog-box-text">
-                  <h4>Visita de la Secretaria de Salud ¿Una Lipo-Visita?</h4>
-                  <h5>En días pasados recibí la llamada de un amigo...</h5>
-                  <a [routerLink]="['/blog-detail','1']" class="blog-btn">Ver más</a>
+                  <h4>{{article.title}}</h4>
+                  <h5 class="text-right">{{article.textMini}}</h5>
+                  <a [routerLink]="['/blog-detail',article.id]" class="blog-btn">Ver más</a>
 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="single-sidebar-blog-box">
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="single-sidebar-blog-box-img">
-                  <img src="/assets/img/blog/seguridadDelPacienteMini.jpg">
-                </div>
-              </div>
-              <div class="col-sm-8">
-                <div class="single-sidebar-blog-box-text">
-                  <h4>Seguridad del Paciente</h4>
-                  <h5>“Seguridad del Paciente se define como el conjunto de elementos...</h5>
-                  <a [routerLink]="['/blog-detail','2']" class="blog-btn">Ver más</a>
                 </div>
               </div>
             </div>
