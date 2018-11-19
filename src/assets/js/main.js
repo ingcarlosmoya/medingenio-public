@@ -193,7 +193,7 @@
     jQuery(window).load(function(){
     
     /*====  preloader js Start =====*/
-    $('#loading').delay(600).fadeOut('slow',function(){$(this).remove();});
+     $('#loading').delay(0).fadeOut('slow',function(){$(this).remove();});
         
     /*====  animation js Start =====*/
         new WOW().init(); 
